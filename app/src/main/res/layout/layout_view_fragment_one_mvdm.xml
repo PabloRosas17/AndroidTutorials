@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="mViewModel"
+            type="coffee.flavors.androidtutorials.mdvm.views.fragments.ViewFragmentOneMVDM"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorLightDark">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mlt_btn_cnr_f1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/gd_f1_05_ver"
+            app:layout_constraintEnd_toEndOf="@id/gd_f1_95_ver"
+            android:backgroundTint="@color/colorLightGhostLight"
+            android:text="FragmentOne"
+            android:textColor="@color/colorLightDark"
+            app:rippleColor="@color/colorLightPrimary"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_f1_05_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_f1_95_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

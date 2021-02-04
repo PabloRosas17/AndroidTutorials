@@ -1,0 +1,222 @@
+<resources>
+    <!-- MVDM Application Material Theme -->
+    <style name="MvdmAppMaterialTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorLightPrimary</item>
+        <item name="colorPrimaryDark">@color/colorLightPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="MtrlTheme.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabBackground">@color/colorLightSecondary</item>
+        <item name="tabIconTint">@color/colorAccent</item>
+        <item name="tabTextColor">@color/colorLightPrimaryDark</item>
+        <item name="tabSelectedTextColor">@color/colorAccent</item>
+        <item name="tabIndicatorColor">@color/colorSecondaryDark</item>
+        <item name="tabRippleColor">@color/colorLightGhostLight</item>
+    </style>
+
+    <!-- Pizzamia Application Material Theme -->
+    <style name="PizzamiaAppMaterialTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorLightPrimary</item>
+        <item name="colorPrimaryDark">@color/colorLightPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="MtrlTheme.Chip" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/colorLightLight</item>
+        <item name="android:textAlignment">center</item>
+        <item name="checkedIcon">@drawable/label_important</item>
+        <item name="chipCornerRadius">15dp</item>
+        <item name="chipBackgroundColor">@drawable/states_materialchips</item>
+        <item name="chipStrokeColor">@drawable/states_materialchips</item>
+        <item name="chipStrokeWidth">10dp</item>
+        <item name="rippleColor">@drawable/states_materialchips</item>
+    </style>
+    <style name="MtrlTheme.BtnCornersCut" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="shapeAppearance">@style/BtnCornerCut</item>
+        <item name="backgroundTint">@drawable/states_materialbutton</item>
+        <item name="android:textColor">@color/colorLightLight</item>
+    </style>
+    <style name="BtnCornerCut" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerFamilyBottomRight">cut</item>
+        <item name="cornerSizeTopRight">09dp</item>
+        <item name="cornerSizeBottomRight">09dp</item>
+        <item name="cornerFamilyTopLeft">cut</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+        <item name="cornerSizeTopLeft">3dp</item>
+        <item name="cornerSizeBottomLeft">3dp</item>
+    </style>
+    <style name="MtrlTheme.CardViewCutCorners" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/CardViewCutCorners</item>
+    </style>
+    <style name="CardViewCutCorners" parent="">
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerFamilyBottomRight">cut</item>
+        <item name="cornerSizeTopRight">13dp</item>
+        <item name="cornerSizeBottomRight">13dp</item>
+        <item name="cornerFamilyTopLeft">cut</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+        <item name="cornerSizeTopLeft">7dp</item>
+        <item name="cornerSizeBottomLeft">7dp</item>
+    </style>
+    <style name="MtrlTheme.RvCardViewCutCorners" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/RvCardViewCutCorners</item>
+        <item name="android:backgroundTint">@color/colorLightPrimaryDark</item>
+    </style>
+    <style name="RvCardViewCutCorners" parent="">
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerFamilyBottomRight">cut</item>
+        <item name="cornerSizeTopRight">21dp</item>
+        <item name="cornerSizeBottomRight">21dp</item>
+        <item name="cornerFamilyTopLeft">cut</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+        <item name="cornerSizeTopLeft">11dp</item>
+        <item name="cornerSizeBottomLeft">11dp</item>
+    </style>
+
+    <!-- Oww Application Material Theme -->
+    <style name="OwwAppLightMaterialTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorLightPrimary</item>
+        <item name="colorPrimaryDark">@color/colorLightPrimaryDark</item>
+        <item name="colorPrimaryVariant">@color/colorLightPrimaryVariant</item>
+        <item name="colorSecondary">@color/colorLightSecondary</item>
+        <item name="colorSurface">@color/colorLightPrimaryDark</item>
+        <item name="colorError">@color/colorLightError</item>
+        <item name="colorOnPrimary">@color/colorLightOnPrimary</item>
+        <item name="colorOnSecondary">@color/colorLightOnSecondary</item>
+        <item name="colorOnBackground">@color/colorLightOnBackground</item>
+        <item name="colorOnSurface">@color/colorLightOnSurface</item>
+        <item name="colorOnError">@color/colorLightOnError</item>
+    </style>
+    <style name="MtrlTheme.LightBackdropCornersCut" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/LightBackdropCornersCut</item>
+        <item name="android:backgroundTint">@color/colorLightPrimary</item>
+    </style>
+    <style name="LightBackdropCornersCut" parent="">
+        <item name="cornerFamilyTopLeft">cut</item>
+        <item name="cornerSizeTopLeft">150dp</item>
+    </style>
+    <style name="MtrlTheme.LightNightLightCardCornersCut" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/LightNightLightCardCornersCut</item>
+        <item name="android:backgroundTint">@color/colorLightSecondary</item>
+    </style>
+    <style name="LightNightLightCardCornersCut" parent="">
+        <item name="cornerFamilyTopLeft">cut</item>
+        <item name="cornerSizeTopLeft">25dp</item>
+    </style>
+    <style name="MtrlTheme.LightDrawerCardCornersCut" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/LightDrawerCardCornersCut</item>
+        <item name="android:backgroundTint">@color/colorLightSecondary</item>
+    </style>
+    <style name="LightDrawerCardCornersCut" parent="">
+        <item name="cornerFamilyBottomRight">cut</item>
+        <item name="cornerSizeBottomRight">25dp</item>
+    </style>
+    <style name="MtrlTheme.LightOwwCardViewCutCorners" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/LightOwwCardViewCutCorners</item>
+    </style>
+    <style name="LightOwwCardViewCutCorners" parent="">
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerSizeTopRight">63dp</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+        <item name="cornerSizeBottomLeft">63dp</item>
+    </style>
+    <style name="MtrlTheme.LightFabBtn" parent="@style/Widget.MaterialComponents.FloatingActionButton">
+        <item name="android:backgroundTint">@color/colorLightSecondary</item>
+        <item name="srcCompat">@drawable/bubbles</item>
+        <item name="tint">@color/colorLightPrimaryDark</item>
+        <item name="maxImageSize">25dp</item>
+        <item name="fabSize">normal</item>
+        <item name="borderWidth">10dp</item>
+        <item name="rippleColor">@color/colorLightOnBackground</item>
+    </style>
+    <style name="MtrlTheme.LightNightLightSwitch" parent="@style/Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="android:backgroundTint">@color/colorLightSecondary</item>
+    </style>
+    <style name="MtrlTheme.LightDrawerSwitch" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/colorLightLight</item>
+    </style>
+
+    <!-- Oww Application Material Theme -->
+    <style name="OwwAppDarkMaterialTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorDarkPrimary</item>
+        <item name="colorPrimaryDark">@color/colorDarkPrimaryDark</item>
+        <item name="colorPrimaryVariant">@color/colorDarkPrimaryVariant</item>
+        <item name="colorSecondary">@color/colorDarkSecondary</item>
+        <item name="colorSurface">@color/colorDarkPrimaryDark</item>
+        <item name="colorError">@color/colorDarkError</item>
+        <item name="colorOnPrimary">@color/colorDarkOnPrimary</item>
+        <item name="colorOnSecondary">@color/colorDarkOnSecondary</item>
+        <item name="colorOnBackground">@color/colorDarkOnBackground</item>
+        <item name="colorOnSurface">@color/colorDarkOnSurface</item>
+        <item name="colorOnError">@color/colorDarkOnError</item>
+    </style>
+    <style name="MtrlTheme.DarkBackdropCornersCut" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/DarkBackdropCornersCut</item>
+        <item name="android:backgroundTint">@color/colorDarkPrimary</item>
+    </style>
+    <style name="DarkBackdropCornersCut" parent="">
+        <item name="cornerFamilyTopLeft">cut</item>
+        <item name="cornerSizeTopLeft">150dp</item>
+    </style>
+    <style name="MtrlTheme.DarkNightLightCardCornersCut" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/DarkNightLightCardCornersCut</item>
+        <item name="android:backgroundTint">@color/colorDarkSecondary</item>
+    </style>
+    <style name="DarkNightLightCardCornersCut" parent="">
+        <item name="cornerFamilyTopLeft">cut</item>
+        <item name="cornerSizeTopLeft">25dp</item>
+    </style>
+    <style name="MtrlTheme.DarkDrawerCardCornersCut" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/DarkDrawerCardCornersCut</item>
+        <item name="android:backgroundTint">@color/colorDarkSecondary</item>
+    </style>
+    <style name="DarkDrawerCardCornersCut" parent="">
+        <item name="cornerFamilyBottomRight">cut</item>
+        <item name="cornerSizeBottomRight">25dp</item>
+    </style>
+    <style name="MtrlTheme.DarkOwwCardViewCutCorners" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/DarkOwwCardViewCutCorners</item>
+    </style>
+    <style name="DarkOwwCardViewCutCorners" parent="">
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerSizeTopRight">63dp</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+        <item name="cornerSizeBottomLeft">63dp</item>
+    </style>
+    <style name="MtrlTheme.DarkFabBtn" parent="@style/Widget.MaterialComponents.FloatingActionButton">
+        <item name="android:backgroundTint">@color/colorDarkSecondary</item>
+        <item name="srcCompat">@drawable/bubbles</item>
+        <item name="tint">@color/colorDarkPrimaryDark</item>
+        <item name="maxImageSize">25dp</item>
+        <item name="fabSize">normal</item>
+        <item name="borderWidth">10dp</item>
+        <item name="rippleColor">@color/colorDarkOnBackground</item>
+    </style>
+    <style name="MtrlTheme.DarkNightLightSwitch" parent="@style/Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="android:backgroundTint">@color/colorDarkSecondary</item>
+    </style>
+    <style name="MtrlTheme.DarkDrawerSwitch" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/colorDarkLight</item>
+    </style>
+
+    <!-- Ub946 Application Material Theme -->
+    <style name="Ub946ppMaterialTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorSurface">@color/colorPrimaryDark</item>
+        <item name="colorError">@color/colorError</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorOnBackground">@color/colorOnBackground</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+        <item name="colorOnError">@color/colorOnError</item>
+        <item name="android:fontFamily">@font/cutiepatootie</item>
+        <item name="android:textColorPrimary">@color/colorOnBackground</item>
+    </style>
+</resources>

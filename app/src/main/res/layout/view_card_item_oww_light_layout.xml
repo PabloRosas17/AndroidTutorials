@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="mViewModel"
+            type="coffee.flavors.androidtutorials.oww.controller.adapter.CardViewFeedAdapter"/>
+        <variable
+            name="mPresenter"
+            type="coffee.flavors.androidtutorials.oww.views.presenters.PresenterCardItem"/>
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mtrl_card_view"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:onClick="@{() -> mPresenter.fireCardItemClicker()}"
+        app:rippleColor="@color/colorLightLight"
+        android:layout_margin="25dp"
+        style="@style/MtrlTheme.LightOwwCardViewCutCorners">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/mtrl_card_img"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/gd_pbox_95_ver"
+                app:layout_constraintBottom_toBottomOf="@id/gd_pbox_55_hor"
+                android:src="@drawable/error"
+                android:contentDescription="weight watchers image." />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtrl_card_title"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/gd_pbox_55_hor"
+                app:layout_constraintStart_toStartOf="@id/gd_pbox_05_ver"
+                app:layout_constraintEnd_toEndOf="@id/gd_pbox_95_ver"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center"
+                android:text="mtrl_card_tv"
+                android:textColor="@color/colorLightLight"/>
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gd_pbox_55_hor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.55" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gd_pbox_05_ver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gd_pbox_95_ver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

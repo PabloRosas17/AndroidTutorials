@@ -1,0 +1,54 @@
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="coffee.flavors.androidtutorials">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name="coffee.flavors.androidtutorials.oww.core.ApplicationOww"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_oww_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/OwwAppLightMaterialTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name="coffee.flavors.androidtutorials.oww.views.ViewEntrance"
+            android:theme="@style/OwwAppLightMaterialTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="coffee.flavors.androidtutorials.oww.views.ViewOww"
+            android:theme="@style/OwwAppLightMaterialTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="coffee.flavors.androidtutorials.oww.views.ViewError"
+            android:theme="@style/OwwAppLightMaterialTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="coffee.flavors.androidtutorials.oww.views.ViewEmpty"
+            android:theme="@style/OwwAppLightMaterialTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="coffee.flavors.androidtutorials.oww.views.ViewDeparture"
+            android:theme="@style/OwwAppLightMaterialTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

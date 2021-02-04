@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="mViewModel"
+            type="coffee.flavors.androidtutorials.oww.views.ViewEntrance"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_view_entrance_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorLightDark">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:text="@string/app_oww_name"
+            android:textColor="@color/colorLightLight"
+            app:layout_constraintTop_toTopOf="@id/gd_entrance_view_dx_40_hor"
+            app:layout_constraintStart_toStartOf="@id/gd_entrance_view_dx_20_ver"
+            app:layout_constraintEnd_toEndOf="@id/gd_entrance_view_dx_80_ver"
+            app:layout_constraintBottom_toBottomOf="@id/gd_entrance_view_dx_60_hor" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textSize="11sp"
+            android:text="Kotlin is love !"
+            android:textColor="@color/colorLightLight"
+            android:alpha="0.60"
+            app:layout_constraintTop_toTopOf="@id/gd_entrance_view_dx_53_hor"
+            app:layout_constraintStart_toStartOf="@id/gd_entrance_view_dx_20_ver"
+            app:layout_constraintEnd_toEndOf="@id/gd_entrance_view_dx_80_ver"
+            app:layout_constraintBottom_toBottomOf="@id/gd_entrance_view_dx_57_hor"
+            />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_entrance_view_dx_40_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.40" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_entrance_view_dx_53_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.53" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_entrance_view_dx_57_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.57" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_entrance_view_dx_60_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.60" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_entrance_view_dx_20_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.20" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_entrance_view_75_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_entrance_view_dx_80_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.80" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

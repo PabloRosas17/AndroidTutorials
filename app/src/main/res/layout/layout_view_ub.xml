@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="mViewModel"
+            type="coffee.flavors.androidtutorials.ub.controller.ViewModelUb"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_view_ub_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/gd_ub_25_hor"
+            app:layout_constraintStart_toStartOf="@id/gd_ub_05_ver"
+            app:layout_constraintEnd_toEndOf="@id/gd_ub_25_ver"
+            app:layout_constraintBottom_toBottomOf="@id/gd_ub_75_hor">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mtrl_btn_start_state_bake_cake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:text="s0"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mtrl_btn_add_state_bake_cake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="s1"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mtrl_btn_check_state_bake_cake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="s2"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mtrl_btn_end_state_bake_cake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="s3"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtrl_tV_current_state"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/gd_ub_25_hor"
+            app:layout_constraintStart_toStartOf="@id/gd_ub_30_ver"
+            app:layout_constraintEnd_toEndOf="@id/gd_ub_95_ver"
+            app:layout_constraintBottom_toBottomOf="@id/gd_ub_75_hor"
+            android:gravity="center"
+            android:text="@string/app_ub_946"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/gd_ub_05_ver"
+            app:layout_constraintEnd_toEndOf="@id/gd_ub_95_ver"
+            app:layout_constraintBottom_toBottomOf="@id/gd_ub_25_hor"
+            android:gravity="center"
+            android:text="Bake a Cake"
+            android:textColor="@color/colorPrimary"
+            android:textSize="35dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/gd_ub_05_ver"
+            app:layout_constraintEnd_toEndOf="@id/gd_ub_95_ver"
+            app:layout_constraintTop_toBottomOf="@id/gd_ub_97_hor"
+            android:gravity="end"
+            android:text="Inspired by Roxie an MVI library."
+            android:textSize="17sp"
+            android:textColor="@color/colorPrimary"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_ub_25_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_ub_50_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.50" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_ub_75_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_ub_97_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.97" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_ub_05_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_ub_25_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_ub_30_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.30" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_ub_95_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- mvdm colors by material design
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorPrimary">#629580</color>
+    <color name="colorPrimaryDark">#966174</color>
+    <color name="colorPrimaryVariant">#566f96</color>
+    <color name="colorSecondary">#6f9cc4</color>
+    <color name="colorSecondaryDark">#af7f54</color>
+    <color name="colorSecondaryVariant">#009a94</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorError">#ED1D24</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorOnBackground">#FFFFFF</color>
+    <color name="colorOnSurface">#FFFFFF</color>
+    <color name="colorOnError">#ED1D24</color>
+    <color name="colorGhostWhite">#F0F0F0</color>
+    <color name="colorLight">#FFFFFF</color>
+    <color name="colorDark">#000000</color> -->
+
+    <!-- pizzamia colors by material design
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorPrimary">#ff896a</color>
+    <color name="colorPrimaryDark">#bf3416</color>
+    <color name="colorPrimaryVariant">#438994</color>
+    <color name="colorSecondary">#ed4173</color>
+    <color name="colorSecondaryDark">#ae1652</color>
+    <color name="colorSecondaryVariant">#d47807</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorError">#ED1D24</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorOnBackground">#FFFFFF</color>
+    <color name="colorOnSurface">#FFFFFF</color>
+    <color name="colorOnError">#ED1D24</color>
+    <color name="colorGhostWhite">#F0F0F0</color>
+    <color name="colorLight">#FFFFFF</color>
+    <color name="colorDark">#000000</color>
+    <color name="colorLightPrimary">#ffd8b7</color>
+    <color name="colorLightSecondary">#f8b6c9</color> -->
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorSecondaryDark">#ae1652</color>
+    <!-- <color name="colorLightPrimary">#ffd8b7</color>
+    <color name="colorLightSecondary">#f8b6c9</color> -->
+
+    <!-- oww light color palette by material design -->
+    <color name="colorLightPrimary">#B61C70</color>
+    <color name="colorLightPrimaryDark">#8E1864</color>
+    <color name="colorLightSecondary">#0071BB</color>
+    <color name="colorLightBackground">#E0F4FE</color>
+    <color name="colorLightSurface">#F8BEDB</color>
+    <color name="colorLightError">#8B0000</color>
+    <color name="colorLightOnPrimary">#FFFFFF</color>
+    <color name="colorLightOnSecondary">#FFFFFF</color>
+    <color name="colorLightOnBackground">#20B0F5</color>
+    <color name="colorLightOnSurface">#8F1865</color>
+    <color name="colorLightOnError">#8B0000</color>
+
+    <color name="colorLightSecondaryVariant">#035099</color>
+    <color name="colorLightPrimaryVariant">#CC1E75</color>
+    <color name="colorLightGhostLight">#F0F0F0</color>
+    <color name="colorLightGhostDark">#0F0F0F</color>
+    <color name="colorLightLight">#FFFFFF</color>
+    <color name="colorLightDark">#000000</color>
+
+    <!-- oww dark color palette by material design -->
+    <color name="colorDarkPrimary">#5C003A</color>
+    <color name="colorDarkPrimaryDark">#0071BB</color>
+    <color name="colorDarkSecondary">#00468A</color>
+    <color name="colorDarkBackground">#121212</color>
+    <color name="colorDarkSurface">#F694C3</color>
+    <color name="colorDarkError">#8B0000</color>
+    <color name="colorDarkOnPrimary">#121212</color>
+    <color name="colorDarkOnSecondary">#121212</color>
+    <color name="colorDarkOnBackground">#121212</color>
+    <color name="colorDarkOnSurface">#5C003A</color>
+    <color name="colorDarkOnError">#8B0000</color>
+
+    <color name="colorDarkSecondaryVariant">#00468A</color>
+    <color name="colorDarkPrimaryVariant">#F694C3</color>
+    <color name="colorDarkGhostLight">#121212</color>
+    <color name="colorDarkGhostDark">#121212</color>
+    <color name="colorDarkLight">#F0F0F0</color>
+    <color name="colorDarkDark">#121212</color>
+
+    <!-- Ub946 color palette by material design -->
+    <color name="colorPrimary">#fff7be</color>
+    <color name="colorPrimaryDark">#cbc48d</color>
+    <color name="colorSecondary">#8173ff</color>
+    <color name="colorBackground">#ff895c</color>
+    <color name="colorSurface">#4947cb</color>
+    <color name="colorError">#8B0000</color>
+    <color name="colorOnPrimary">#4947cb</color>
+    <color name="colorOnSecondary">#4947cb</color>
+    <color name="colorOnBackground">#4947cb</color>
+    <color name="colorOnSurface">#4947cb</color>
+    <color name="colorOnError">#8B0000</color>
+
+    <color name="colorSecondaryVariant">#00468A</color>
+    <color name="colorPrimaryVariant">#F694C3</color>
+    <color name="colorGhostLight">#121212</color>
+    <color name="colorGhostDark">#121212</color>
+    <color name="colorLight">#F0F0F0</color>
+    <color name="colorDark">#121212</color>
+</resources>

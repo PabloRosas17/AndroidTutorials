@@ -1,0 +1,188 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    /* compileSdkVersion what version of android to compile the app with */
+    /* buildToolsVersion component of android sdk required to build the app */
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    compileOptions {
+        /* java compiler options
+        * incremental whether Java compilation should be incremental or not.
+        * sourceCompatibility language level of the java source code.
+        * targetCompatibility version of the generated Java bytecode.*/
+        /* incremental true */
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        /* additional compilation options
+         * jvmTarget Target version of the generated JVM bytecode */
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    defaultConfig {
+        /* product flavors configuration is a wise choice,
+         * debug { ... }
+         * release { ... }
+         * reference: https://developer.android.com/studio/build/build-variants
+         * applicationId the application id
+         * minSdk min sdk for the app
+         * targetSdkVersion sdk the app designed to run on
+         * maxSdkVersion max sdk for the app
+         * versionCode used to determin if one version is higher than another
+         * versionName version name shown to users
+         * testInstrumentationRunner to use JUnit 4 test classes
+         * buildConfigField customized fields accessed during build time*/
+        applicationId "coffee.flavors.androidtutorials"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    /* flavorDimensions "SOME_STRING" see the documentation when we are ready for this */
+    buildTypes {
+        /* sever as the debug flavor
+         * minifyEnabled removal of unused java code (dependencies)
+         * proguardFiles proguard configurations file plugins should use */
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        /* serve as the release flavor
+         * crunchPngs will optimize png resources not already compressed
+         * minifyEnabled removal of unused java code (dependencies)
+         * shrinkResources shrinks unused resources
+         * proguardFiles proguard configurations file plugins should use */
+        release {
+            crunchPngs true
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    androidExtensions {
+        /* experimental features for kotlin */
+        experimental = true
+    }
+    /* Data binding helps you write declarative layouts
+     * and minimize the glue code necessary to bind your application logic and layouts. */
+    dataBinding {
+        /* bind the application data to the layouts in a concise way */
+        enabled = true
+    }
+    packagingOptions {
+        /* excludes the atomic functions module to prevent warnings */
+        /* paths that match exclude patterns will not be included in the apk */
+        exclude 'META-INF/atomicfu.kotlin_module'
+        exclude 'META-INF/main.kotlin_module'
+    }
+    lintOptions {
+        /* lint configuration to customize builds */
+        disable 'InvalidPackage'
+        checkReleaseBuilds false
+    }
+    testOptions {
+        unitTests {
+            /* unit test can use android resources, assets, manifest */
+            includeAndroidResources = true
+            all {
+                /* JVM options for heap size during testing */
+                minHeapSize = "128m"
+                maxHeapSize = "1024m"
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    implementation 'androidx.annotation:annotation:' + rootProject.androidxLibVersion;
+    androidTestImplementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    androidTestImplementation 'androidx.test:core:' + rootProject.coreVersion
+    androidTestImplementation 'androidx.test:core-ktx:' + rootProject.coreVersion
+    androidTestImplementation 'androidx.test.ext:junit:' + rootProject.extJUnitVersion
+    androidTestImplementation 'androidx.test.ext:junit-ktx:' + rootProject.extJUnitVersion
+    androidTestImplementation 'androidx.test:runner:' + rootProject.runnerVersion
+    androidTestImplementation 'androidx.test.espresso:espresso-core:' + rootProject.espressoVersion
+    testImplementation 'androidx.test:core:' + rootProject.coreVersion;
+    testImplementation 'androidx.test.ext:junit:' + rootProject.extJUnitVersion
+    testImplementation 'org.robolectric:robolectric:' + rootProject.robolectricVersion
+    testImplementation 'androidx.test.espresso:espresso-core:' + rootProject.espressoVersion
+    testImplementation 'androidx.test.espresso:espresso-intents:' + rootProject.espressoVersion
+    testImplementation 'androidx.test.ext:truth:' + rootProject.extTruthVersion
+    testImplementation 'junit:junit:' + rootProject.junit
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:' + rootProject.squareleakcanary
+    implementation 'com.squareup.retrofit2:retrofit:' + rootProject.squaremoshi
+    implementation 'com.squareup.retrofit2:converter-moshi:' + rootProject.squaremoshiconverter
+    implementation 'com.squareup.okhttp3:okhttp:' + rootProject.squareokhttp
+    implementation 'com.squareup.okhttp3:logging-interceptor:' + rootProject.squareinterceptor
+    implementation 'com.squareup.picasso:picasso:' + rootProject.squarepicasso
+    implementation 'com.squareup.moshi:moshi-kotlin:' + rootProject.squaremoshikotlin
+    kapt 'com.squareup.moshi:moshi-kotlin-codegen:' + rootProject.squaremoshicodegen
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+
+    implementation 'androidx.core:core-ktx:' + rootProject.coreKtx
+    implementation 'androidx.lifecycle:lifecycle-extensions:' + rootProject.lifecycleVersion
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:' + rootProject.lifecycleVersion
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:' + rootProject.lifecycleVersion
+    implementation 'androidx.lifecycle:lifecycle-reactivestreams-ktx:' + rootProject.lifecycleVersion
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-savedstate:' + rootProject.savedstateVersion
+    testImplementation 'androidx.arch.core:core-testing:' + rootProject.archVersion
+    kapt 'androidx.lifecycle:lifecycle-compiler:' + rootProject.lifecycleVersion
+
+    /* TODO: warning!!! */
+    implementation 'io.reactivex.rxjava2:rxjava:' + rootProject.rx2java
+    implementation 'io.reactivex.rxjava2:rxandroid:' + rootProject.rx2android
+    implementation 'io.reactivex.rxjava2:rxkotlin:' + rootProject.rx2kotlin
+    implementation 'io.reactivex.rxjava3:rxandroid:' + rootProject.rx3android
+    implementation 'io.reactivex.rxjava3:rxjava:' + rootProject.rx3java
+
+    implementation "androidx.room:room-runtime:" + rootProject.room
+    implementation "androidx.room:room-ktx:" + rootProject.room
+    kapt "androidx.room:room-compiler:" + rootProject.room
+    androidTestImplementation "androidx.room:room-testing:" + rootProject.room
+
+    implementation 'com.google.dagger:dagger:' + rootProject.dagger
+    kapt 'com.google.dagger:dagger-compiler:' + rootProject.daggercompiler
+    implementation 'com.google.dagger:dagger-android:' + rootProject.dagger
+    kapt 'com.google.dagger:dagger-android-processor:' + rootProject.dagger
+
+    def koin_version = "2.1.1"
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+    implementation "org.koin:koin-androidx-fragment:$koin_version"
+    testImplementation "org.koin:koin-test:$koin_version"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:" + rootProject.coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:" + rootProject.coroutines
+
+    /* Kotlin data binging */
+    kapt 'com.android.databinding:compiler:' + rootProject.databinding
+
+    /* Support libraries for AndroidX */
+    implementation 'androidx.appcompat:appcompat:' + rootProject.appcompatsupport
+
+    /* Constraint library for AndroidX */
+    implementation "androidx.constraintlayout:constraintlayout:" + rootProject.constraintlayout
+
+    /* Google Material Design for AndroidX */
+    implementation 'com.google.android.material:material:' + rootProject.materialdesign
+
+    /* Mockito for AndroidX */
+    testImplementation 'org.mockito:mockito-core:' + rootProject.mockitoVersion
+
+    /* MVI wrapper by WW-TECH for AndroidX */
+    implementation 'com.ww:roxie:' + rootProject.wwroxie
+}

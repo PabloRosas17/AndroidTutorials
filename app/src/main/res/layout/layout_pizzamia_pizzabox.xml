@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="mViewModel"
+            type="coffee.flavors.androidtutorials.pizzamia.views.ViewPizzaBox"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF3E0">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/pizzbox_cardview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/gd_pbox_05_hor"
+            app:layout_constraintStart_toStartOf="@id/gd_pbox_05_ver"
+            app:layout_constraintEnd_toEndOf="@id/gd_pbox_95_ver"
+            app:layout_constraintBottom_toBottomOf="@id/gd_pbox_10_hor"
+            android:gravity="center"
+            android:alpha="0.17"
+            android:backgroundTint="@color/colorLightPrimary"
+            style="@style/MtrlTheme.CardViewCutCorners">
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/pizzbox_cardview"
+            app:layout_constraintStart_toStartOf="@id/gd_pbox_05_ver"
+            app:layout_constraintEnd_toEndOf="@id/gd_pbox_95_ver"
+            app:layout_constraintBottom_toBottomOf="@id/gd_pbox_10_hor"
+            android:gravity="center"
+            android:text="Pizzamia"
+            android:textSize="29sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorLightPrimaryVariant"
+            app:fontFamily="@font/cutiepatootie"/>
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/mtrl_chip_gp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@+id/gd_pbox_15_hor"
+            app:layout_constraintBottom_toBottomOf="@id/gd_pbox_50_hor"
+            app:layout_constraintStart_toStartOf="@id/gd_pbox_05_ver"
+            app:layout_constraintEnd_toEndOf="@id/gd_pbox_75_ver"
+            app:singleSelection="true"
+            app:singleLine="false">
+        </com.google.android.material.chip.ChipGroup>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/gd_pbox_25_hor"
+            app:layout_constraintBottom_toBottomOf="@id/gd_pbox_50_hor"
+            app:layout_constraintStart_toStartOf="@id/gd_pbox_75_ver"
+            app:layout_constraintEnd_toEndOf="@id/gd_pbox_95_ver">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mtrl_btn_db_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ADD"
+                android:enabled="false"
+                style="@style/MtrlTheme.BtnCornersCut"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mtrl_btn_db_del"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DEL"
+                android:enabled="false"
+                style="@style/MtrlTheme.BtnCornersCut"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mtrl_btn_db_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SHOW"
+                style="@style/MtrlTheme.BtnCornersCut"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            app:layout_constraintTop_toBottomOf="@id/gd_pbox_50_hor"
+            app:layout_constraintStart_toStartOf="@id/gd_pbox_05_ver"
+            app:layout_constraintEnd_toEndOf="@id/gd_pbox_95_ver"
+            android:background="@color/colorLightPrimary"
+            android:alpha="0.25"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_db"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/gd_pbox_50_hor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/gd_pbox_05_ver"
+            app:layout_constraintEnd_toEndOf="@id/gd_pbox_95_ver"
+            android:layout_margin="25dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_pbox_05_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_pbox_10_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.10" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_pbox_15_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_pbox_25_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_pbox_50_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.50" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_pbox_05_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_pbox_75_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_pbox_95_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+<!-- ***acknowledgement*** cutie patootie font by
+     Vanessa Bays @ http://bythebutterfly.com
+     as the original creator. -->
